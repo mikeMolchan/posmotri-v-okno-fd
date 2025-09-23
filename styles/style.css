@@ -299,13 +299,11 @@ h2.search-form__fieldset-title {
 
 .content__video-card-description {
   font-family: Fira Sans Condensed, Arial, sans-serif;
-
   line-height: 16px;
   display: -webkit-box; 
   -webkit-box-orient: vertical; 
   -webkit-line-clamp: 4; 
   line-clamp: 4; 
-  /* overflow: hidden;  */
 }
 
 
