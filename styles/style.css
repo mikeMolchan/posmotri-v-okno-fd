@@ -15,7 +15,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   display: flex;
@@ -180,8 +180,7 @@ h2.search-form__fieldset-title {
 .content__list-container {
   position: relative;
   height: 300px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -195,7 +194,7 @@ h2.search-form__fieldset-title {
 
 .content__card-link {
   text-decoration: none;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   color: white;
   display: block;
 }
@@ -228,7 +227,7 @@ h2.search-form__fieldset-title {
 .button {
   background-color: transparent;
   border: 1px solid white;
-  color: white;
+  color: currentColor;
   height: 34px;
   line-height: 34px;
   cursor: pointer;
@@ -267,6 +266,8 @@ h2.search-form__fieldset-title {
 .content__video-card-thumbnail {
   min-width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
@@ -283,18 +284,28 @@ h2.search-form__fieldset-title {
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-title {
+  max-width: 196px;
   font-size: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
-  line-clamp: 2;
-  overflow: hidden;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
+
+  line-height: 16px;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 4; 
+  line-clamp: 4; 
+  /* overflow: hidden;  */
 }
 
 
@@ -305,7 +316,7 @@ h2.search-form__fieldset-title {
   font-size: 75px;
   text-transform: uppercase;
   line-height: 94%;
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
 }
 
 .content__accent {
